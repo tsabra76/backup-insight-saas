@@ -4,48 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BackupInsight Dashboard</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-        .card { background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .value-display { font-size: 24px; font-weight: bold; color: #28a745; }
-        h2 { color: #333; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .insight-item { margin: 10px 0; padding: 10px; background-color: white; border-radius: 4px; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>BackupInsight Dashboard</h1>
-    
-    <div class="card">
-        <h2>Your Backup Analysis</h2>
-        <p>Total Files: <span class="value-display">58</span></p>
-        <p>Total Size: <span class="value-display">3.13GB</span></p>
-        <p>Estimated Value: <span class="value-display">$896</span></p>
-    </div>
-    
-    <div class="card">
-        <h2>Key Insights</h2>
-        <div class="insight-item">
-            Your backup contains significant electronic music collections
-        </div>
-        <div class="insight-item">
-            Most valuable assets are in the industrial/techno genre
-        </div>
-        <div class="insight-item">
-            Diversity of formats shows thoughtful collection practices
-        </div>
-    </div>
-    
-    <div class="card">
-        <h2>Backup Health</h2>
-        <p>Your backup structure looks well-organized with 18 directories and appropriate file categorization.</p>
-        <p>This suggests good digital asset management habits which increases overall value.</p>
-    </div>
-    
-    <div class="card">
-        <h2>Subscription Status</h2>
-        <p>You are currently subscribed to the BackupInsight Pro plan for $9.99/month</p>
-        <p>Your next billing date is [Next Month]</p>
-        <button onclick="window.location.href='/dashboard.html'">View Full Report</button>
+    <div class="container">
+        <header>
+            <h1>BackupInsight Analytics</h1>
+            <p>Your backup analysis results</p>
+        </header>
+
+        <main id="dashboard-content">
+            <!-- Dashboard content will be populated here -->
+            <div id="loading-message">Loading dashboard data...</div>
+        </main>
+
+        <script>
+            // Fetch and display dashboard information
+            async function loadDashboard() {
+                try {
+                    const response = await fetch('/dashboard-data');
+                    const data = await response.json();
+                    
+                    document.getElementById('loading-message').innerHTML = '';
+                    
+                    let html = `
+                        <div class="analytics-card">
+                            <h2>Your Backup Analysis</h2>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <span class="stat-value">${data.totalFiles}</span>
+                                    <span class="stat-label">Total Files</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">${data.totalSize}</span>
+                                    <span class="stat-label">Total Size</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    // Add insights section
+                    html += `<div class="insights-section">
+                        <h3>Personalized Insights</h3>
+                        ${data.insights.map(insight => `<p>${insight}</p>`).join('')}
+                    </div>`;
+                    
+                    document.getElementById('dashboard-content').innerHTML = html;
+                } catch (error) {
+                    console.error('Error loading dashboard:', error);
+                    document.getElementById('loading-message').innerHTML = '<p>Failed to load dashboard data.</p>';
+                }
+            }
+
+            // Load on page load
+            loadDashboard();
+        </script>
     </div>
 </body>
 </html>

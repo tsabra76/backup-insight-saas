@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackupInsight - Discover the Value in Your Digital Backups</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .hero {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .dashboard-preview {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .screenshot {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid #eee;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .tagline { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BackupInsight</h1>
+            <p class="tagline">Discover the true value of your digital backups</p>
+            <a href="https://backup-insight-saas.herokuapp.com/" class="cta-button">Start Your Free Trial Now</a>
+        </header>
+
+        <div class="hero">
+            <h2>Unlock Insights from Your Backup Data</h2>
+            <p>BackupInsight analyzes your digital backups to reveal what you never knew was there - the hidden value of your files, patterns in your collections, and personalized insights that help you make better decisions about your digital life.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Discover Value</h3>
+                <p>Your backup contains significant electronic music collections worth up to $896 in value, based on analysis of your 3.13GB collection.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Personalized Analysis</h3>
+                <p>Detailed breakdown of your file types, size distribution and content patterns that reveal the true importance of your backup collections.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Simplified Management</h3>
+                <p>Monthly subscription at just $9.99/month for ongoing access to advanced analytics and dashboard insights.</p>
+            </div>
+        </div>
+
+        <div class="dashboard-preview">
+            <h2>What You'll See in Your Dashboard</h2>
+            <p>Your personalized backup insight view shows the breakdown of your data along with key insights from our analytics engine:</p>
+            
+            <!-- This is an example dashboard screenshot -->
+            <div style="text-align: center; background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h3>Sample Dashboard Preview</h3>
+                <p><strong>Total Files:</strong> 58</p>
+                <p><strong>Total Size:</strong> 3.13GB</p>
+                <p><strong>File Types:</strong> audio, documents, images</p>
+                <p><strong>Estimated Value:</strong> $896</p>
+                <h4>Your Personalized Insights:</h4>
+                <ul style="text-align: left; margin-left: 30px;">
+                    <li>Your backup contains significant electronic music collections</li>
+                    <li>Most valuable assets are in the industrial/techno genre</li>
+                    <li>Diversity of formats shows thoughtful collection practices</li>
+                </ul>
+            </div>
+
+            <p>The real-time dashboard updates with new insights as your backup evolves, making it simple to understand what matters most in your digital collections.</p>
+        </div>
+
+        <footer>
+            <h3>Ready to discover more about your backups?</h3>
+            <a href="https://backup-insight-saas.herokuapp.com/" class="cta-button">Start Your Free Trial</a>
+            <p style="margin-top: 20px;">$9.99/month subscription gets you access to these advanced analytics features.</p>
+        </footer>
+    </div>
+</body>
+</html>

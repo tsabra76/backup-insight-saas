@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #e94560;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #a0a0a0;
+    font-size: 18px;
+}
+
+/* Checkout Page Specific Styles */
+.checkout-page .pricing-section {
+    background-color: #16213e;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.pricing-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f3460;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.pricing-info {
+    flex-grow: 1;
+}
+
+.plan-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e94560;
+    margin-bottom: 8px;
+}
+
+.plan-price {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.feature-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 25px;
+    background-color: #16213e;
+    border-radius: 12px;
+    flex: 1;
+    margin-right: 15px;
+    min-width: 200px;
+}
+
+.feature-icon {
+    font-size: 48px;
+    color: #e94560;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.form-section {
+    background-color: #16213e;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #e94560;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #0f3460;
+    border: 1px solid #0f3460;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #e94560;
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.3);
+}
+
+.submit-button {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #c73e52;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
+}
+
+.guarantee-section {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #1a1a2e;
+    border-radius: 15px;
+}
+
+guarantee-text {
+    color: #a0a0a0;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Dashboard Page Specific Styles */
+.dashboard-page .dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.dashboard-page .sidebar {
+    width: 250px;
+    background-color: #16213e;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #0f3460;
+}
+
+.dashboard-page .brand {
+    color: #e94560;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #0f3460;
+}
+
+.dashboard-page .nav-links {
+    list-style: none;
+}
+
+.dashboard-page .nav-links li {
+    margin-bottom: 15px;
+}
+
+.dashboard-page .nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #a0a0a0;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-page .nav-links a:hover, .dashboard-page .nav-links a.active {
+    background-color: #0f3460;
+    color: #e94560;
+}
+
+.dashboard-page .nav-links i {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.dashboard-page .main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.dashboard-page .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-page .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dashboard-page .profile-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #e94560;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Stats Section */
+.dashboard-page .stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background-color: #16213e;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.stat-icon {
+    font-size: 42px;
+    color: #e94560;
+    margin-bottom: 20px;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: #a0a0a0;
+    font-size: 16px;
+}
+
+/* Progress Bars */
+.analysis-section .progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background-color: #0f3460;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.analysis-section .progress-fill {
+    width: 78%;
+    height: 100%;
+    background-color: #e94560;
+    border-radius: 6px;
+    position: relative;
+}
+
+.analysis-section .progress-percentage {
+    position: absolute;
+    right: -30px;
+    top: -25px;
+    color: #e94560;
+    font-weight: bold;
+}
+
+/* Table Styles */
+.file-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.file-table th, .file-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #0f3460;
+}
+
+.file-table th {
+    background-color: #1a1a2e;
+    color: #e94560;
+}
+
+.file-size {
+    color: #a0a0a0;
+}
+
+.action-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.action-icon {
+    color: #a0a0a0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-icon:hover {
+    color: #e94560;
+}
+
+/* Subscription Info */
+.subscription-container {
+    background-color: #16213e;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.sub-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-plan {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e94560;
+}
+
+.upgrade-btn {
+    background-color: #1a1a2e;
+    color: #e94560;
+    border: 1px solid #e94560;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upgrade-btn:hover {
+    background-color: #e94560;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #a0a0a0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-page .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .dashboard-page .sidebar {
+        width: auto;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    .feature-section {
+        flex-wrap: wrap;
+    }
+}
